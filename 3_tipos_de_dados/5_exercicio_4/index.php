@@ -13,22 +13,26 @@
 
     if (is_float($n1)){
         echo ("O primeiro número é float<br>");
+        echo $n1 . "<br>";
     }
 
-    else se if (is_float($n2)){
+    if (is_float($n2)){
         echo ("O segundo número é float<br>");
+        echo $n2 . "<br>";
     }
 
-    else if (is_float($n3)){
+    if (is_float($n3)){
         echo ("O terceiro número é float<br>");
+        echo $n3 . "<br>";
     }
 
-    else if (is_float($n4)){
+    if (is_float($n4)){
         echo ("O quarto número é float<br>");
+        echo $n4 . "<br>";
     }
 
     function soma($n1, $n2, $n3, $n4){
         return $n1 + $n2 + $n3 + $n4;
     }
 
-    echo soma($n1, $n2, $n3, $n4);
+    echo "Soma dos números: " . soma($n1, $n2, $n3, $n4);
