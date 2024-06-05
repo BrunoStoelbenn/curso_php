@@ -1,7 +1,5 @@
 <?php
-echo "Hello World 2!";
 
-$nome = "Bruno Cassiano Stoelbenn";
+    echo "Hello World 2!";
 
-echo "Meu nome é " . $nome . ".";
 ?>
