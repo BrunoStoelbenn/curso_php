@@ -1,28 +1,14 @@
 <?php
 
-  // +, -, /, *
-  $a = 3;
-  $b = 12;
+  $n1 = 10;
+  $n2 = 20;
 
-  $op1 = $a - $b;
-  echo $op1;
-  echo "<br>";
+  $soma = $n1+$n2;
 
-  $c = 12.4;
+  $subtracao = $n1-$n2;
 
-  $op2 = $op1 * $c;
-  echo $op2;
-  echo "<br>";
+  $multiplicacao = $n1*$n2;
 
-  $d = 4.8;
+  $divisao = $n1/$n2;
 
-  $op3 = $op2 + $d;
-  echo $op3;
-  echo "<br>";
-
-  $e = 9.2;
-
-  $op4 = $op3 / $e;
-
-  echo $op4;
-  echo "<br>";
+  echo $soma . "<br>" . $subtracao . "<br>" . $multiplicacao . "<br>" . $divisao . "<br>";

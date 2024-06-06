@@ -1,21 +1,14 @@
 <?php
 
-  $a = (int) "testando";
-  echo $a . "<br>";
-  $b = (int) "asd";
-  echo $b . "<br>";
+  $testando = (int) "testando";
 
-  $c = (int) 12.9;
-  echo $c . "<br>";
-  $d = (int) 5;
-  echo $d . "<br>";
+  $numero = (int) 12.9;
 
-  $e = (int) true;
-  echo $e . "<br>";
-  $f = (int) false;
-  echo $f . "<br>";
+  $bool = (int) true;
 
-  $g = (int) [1, 2, 3];
-  echo $g . "<br>";
-  $h = (int) [1, 2, 3, 4, 5, 6];
-  echo $h . "<br>";
+  $lista = (int) [1, 2, 3];
+
+  echo $testando . "<br>";
+  echo $numero . "<br>";
+  echo $bool . "<br>";
+  echo $lista . "<br>";

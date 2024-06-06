@@ -1,13 +1,21 @@
 <?php
 
-  $a = 4;
-  $b = 5;
-  $c = 4;
+  $n1 = 10;
+  $n2 = 7;
+  $n3 = 7;
 
-  if($a == $b) {
-    echo "A é igual a B <br>";
+  if ($n1 == $n2){
+    echo "Verdade<br>";
   }
 
-  if($a == $c) {
-    echo "A é igual a C <br>";
+  else {
+    echo "Não são iguais<br>";
+  }
+
+  if ($n2 == $n3){
+    echo "Verdade<br>";
+  }
+
+  else {
+    echo "Não são iguai<br>";
   }

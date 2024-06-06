@@ -1,13 +1,9 @@
 <?php
 
-  $operacao = "5" * 12;
+  $numero = 12;
 
-  echo $operacao . "<br>";
+  $concatenacao = "5" * $numero;
 
-  echo gettype($operacao);
-  echo "<br>";
-  echo gettype([]);
-  echo "<br>";
-  echo gettype(12.2);
-  echo "<br>";
-  echo gettype("teste");
+  echo $concatenacao . "<br>";
+
+  echo gettype($concatenacao);

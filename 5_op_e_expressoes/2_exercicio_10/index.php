@@ -1,10 +1,10 @@
 <?php
 
-  // -, /, *
-  $a = 10;
-  $x = 5;
-  $z = 9;
+  $n1 = 10;
+  $n2 = 20;
+  $n3 = 30;
+  $n4 = 40;
+  
+  $operação = $n2 - $n1 * $n4 / $n3;
 
-  $operacao = ($x - $z) / $a * $z;
-
-  echo $operacao;
+  echo $operação;

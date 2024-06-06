@@ -1,10 +1,5 @@
 <?php
 
-  $a = 14;
-  $b = 2;
-  $c = 3;
+  echo 10 % 2 . "<br>";
 
-  echo $a % $b;
-  echo "<br>";
-  echo $a % $c;
-  echo "<br>";
+  echo 17 % 7;

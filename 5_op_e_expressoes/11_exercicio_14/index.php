@@ -1,9 +1,11 @@
 <?php
 
-  $saudacao = "Sr.";
-  $nome = "Pedro";
-  $sobrenome = "Amaral";
+  $nome = "Bruno Cassiano";
 
-  $frase = "O " . $saudacao . " " . $nome . " " . $sobrenome . ", vem hoje para a reunião as 14h";
+  $sobrenome = "Stoelbenn";
 
-  echo $frase;
+  $saudacao = "Olá! tudo bem?";
+
+  $fraseCompleta = "$saudacao meu nome é $nome e meu sobrenome é $sobrenome.";
+
+  echo $fraseCompleta;
