@@ -2,12 +2,4 @@
 
   $peso = 16.12;
 
-  if($peso > 80) {
-
-    echo "O pacote está pesado demais <br>";
-
-  } else {
-
-    echo "Peso dentro do limite <br>";
-
-  }
+  echo $peso > 80 ? "Está pesado demais! <br>" : "Peso dentro do limite! <br>";

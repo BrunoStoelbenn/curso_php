@@ -4,32 +4,38 @@
   $b = "Roda";
   $c = [];
 
-  if(is_int($a)) {
-
-    echo "É um inteiro 1 <br>";
-
-  } else {
-
-    echo "Não é um inteiro 1 <br>";
-
+  function verificarTipoVariavel1($variavel){
+    echo is_int($variavel) ? "É inteiro! <br>" : "Não é inteiro! <br>";
+    echo is_float($variavel) ? "É float! <br>" : "Não é float! <br>";
+    echo is_string($variavel) ? "É String! <br>" : "Não é String! <br>";
+    echo is_bool($variavel) ? "É booleano! <br>" : "Não é booleano! <br>";
+    echo is_array($variavel) ? "É array! <br>" : "Não é array! <br>";
   }
 
-  if(is_int($b)) {
-
-    echo "É um inteiro 2 <br>";
-
-  } else {
-
-    echo "Não é um inteiro 2 <br>";
-
+  function verificarTipoVariavel2($variavel){
+    if (is_int($variavel)){
+      echo "É inteiro!<br>";
+    }
+    else if (is_float($variavel)){
+      echo "É float!<br>";
+    }
+    else if (is_string($variavel)){
+      echo "É String!<br>";
+    }
+    else if (is_bool($variavel)){
+      echo "É booleana!<br>";
+    }
+    else if (is_array($variavel)){
+      echo "É array!<br>";
+    }
+    else {
+      "A variável passada como parâmetro não pertence aos tipos inteiro, float, string, bool e nem array!.<br>";
+    }
   }
 
-  if(is_int($c)) {
-
-    echo "É um inteiro 3 <br>";
-
-  } else {
-
-    echo "Não é um inteiro 3 <br>";
-
-  }
+  verificarTipoVariavel1($a);
+  echo "<br>";
+  verificarTipoVariavel2($b);
+  echo "<br>";
+  verificarTipoVariavel2($c);
+  echo "<br>";

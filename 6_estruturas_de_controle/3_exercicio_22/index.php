@@ -4,21 +4,10 @@
   $idade2 = 18;
   $idade3 = 26;
 
-  $maioridade = 18;
-
-  $msg = "Você é maior de idade <br>";
-
-  if($idade1 >= $maioridade) {
-    echo "1 - ";
-    echo $msg;
+  function maiorIdade($idade){
+    return $idade >= 18 ? "É de maior <br>" : "É de menor <br>";
   }
 
-  if($idade2 >= $maioridade) {
-    echo "2 - ";
-    echo $msg;
-  }
-
-  if($idade3 >= $maioridade) {
-    echo "3 - ";
-    echo $msg;
-  }
+  echo maiorIdade($idade1);
+  echo maiorIdade($idade2);
+  echo maiorIdade($idade3);
