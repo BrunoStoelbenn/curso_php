@@ -1,33 +1,18 @@
 <?php
 
-  $arr = [];
-
-  for($i = 0; $i <= 30; $i++) {
-
-    array_push($arr, $i);
-
-  }
-
-  // print_r($arr);
-
-  function arrayMaiorQueSete($array) {
-
-    $arrayRetorno = [];
-
-    for($j = 0; $j < count($array); $j++) {
-
-      if($array[$j] > 7) {
-
-        array_push($arrayRetorno, $array[$j]);
-
+  $array_numeros = [10, 20, 30, 5, 4, 3, 2, 7, 40, 50, 60];
+  function numeroMaioresQue7($array){
+    $novo_array = [];
+    for ($i = 0; $i < count($array); $i++){
+      if ($array[$i] > 7){
+        array_push($novo_array, $array[$i]);
       }
-
+      else {
+        continue;
+      }
     }
-
-    return $arrayRetorno;
-
+    return $novo_array;
   }
+  print_r(numeroMaioresQue7($array_numeros));
 
-  $novoArray = arrayMaiorQueSete($arr);
-
-  print_r($novoArray);
+  

@@ -1,10 +1,18 @@
 <?php
 
-  function apresentarPessoa($nome, $idade, $genero) {
-
-    echo "Olá eu sou $genero $nome e tenho $idade anos <br>";
-
+  function dadosBasicos($nome, $idade, $genero){
+    if ($genero == "Masculino"){
+      return "Olá, eu sou o $nome e tenho $idade anos! <br>";
+    }
+    else{
+      return "Olá, eu sou a $nome e tenho $idade anos! <br>";
+    }
+    
   }
 
-  apresentarPessoa("Matheus", 29, "o");
-  apresentarPessoa("Alexia", 24, "a");
+  echo dadosBasicos("Bruno", 21, "Masculino");
+  echo dadosBasicos("Guilherme", 21, "Masculino");
+  echo dadosBasicos("Matheus", 21, "Masculino");
+  echo dadosBasicos("Isabela", 18, "Feminino");
+
+

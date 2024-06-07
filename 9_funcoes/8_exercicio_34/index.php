@@ -1,16 +1,15 @@
 <?php
 
   function parOuImpar($num) {
-
-    if($num % 2 === 0) {
-      echo "O número $num: é par <br>";
-    } else {
-      echo "O número $num: é ímpar <br>";
+    if ($num % 2 == 0){
+      return "O número $num é par! <br>";
+    }
+    else{
+      return "O número $num é ímpar! <br>";
+    }
     }
 
-  }
-
-  parOuImpar(30);
-  parOuImpar(31);
-  parOuImpar(22);
-  parOuImpar(11);
+    echo parOuImpar(10);
+    echo parOuImpar(13);
+    echo parOuImpar(14);
+    echo parOuImpar(15);

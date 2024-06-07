@@ -1,19 +1,10 @@
 <?php
 
-  function numAoQuadrado($x) {
-
-    $resultado = $x ** 2;
-
-    return $resultado;
-
+  function numeroAoQuadrado($num){
+    return $num ** 2 . "<br>";
   }
 
-  echo numAoQuadrado(2) . "<br>";
+  echo numeroAoQuadrado(3);
+  echo numeroAoQuadrado(9);
+  echo numeroAoQuadrado(6);
 
-  $num = numAoQuadrado(4);
-  
-  echo $num . "<br>";
-
-  $x = numAoQuadrado(123);
-
-  echo $x . "<br>";

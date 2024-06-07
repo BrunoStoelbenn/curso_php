@@ -1,23 +1,16 @@
 <?php
 
-  $lista = ["Arroz", "Trigo", "Cerveja", "Sal", "Vinagre"];
+  $arraySupermercado = ["Arroz", "Feijão", "Azeite", "Frango"];
 
-  function listaParaString($arr) {
-
-    $str = "Você levou estes itens do mercado: ";
-
-    for($i = 0; $i < count($arr); $i++) {
-
-      if($i + 1 == count($arr)) {
-        $str .= "$arr[$i].";
-      } else {
-        $str .= "$arr[$i], ";
+  function formatarArray($array){
+    $str = "Você levou esses ítens do supermercado: ";
+    foreach($array as $item){
+      if($item == $array[count($array) - 1])
+        $str .= "$item.";
+      else{
+        $str .= "$item, ";
       }
-
     }
-
     return $str;
-
   }
-
-  echo listaParaString($lista);
+  echo formatarArray($arraySupermercado);
