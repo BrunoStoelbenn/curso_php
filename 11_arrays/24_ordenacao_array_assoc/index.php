@@ -7,7 +7,7 @@
     'Maria' => 12
   ];
 
-  asort($arr);
+  asort($arr);  //  Ordena arrays associativos pelo valor, não pela chave
 
   print_r($arr);
   echo "<br>";
@@ -25,7 +25,7 @@
   print_r($arr2);
   echo "<br>";
 
-  ksort($arr2);
+  ksort($arr2);  //  ksort ordena pela chave, não pelo valor
 
   print_r($arr2);
   echo "<br>";

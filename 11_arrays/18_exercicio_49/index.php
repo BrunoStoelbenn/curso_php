@@ -1,17 +1,14 @@
 <?php
 
-  $raca = "Vira lata";
-  $nome = "Turca";
-  $idade = 3;
-  $cor = "Preta";
+  $animal = "Cachorro";
+  $raca = "Pastor alemão";
+  $cor = "Beje";
+  $caminha = true;
+  $late = true;
+  $pegaOsso = true;
 
-  $turca = compact("raca", "nome", "idade", "cor");
+  $arrayAnimal = compact("animal", "raca", "cor", "caminha", "late", "pegaOsso");
 
-  print_r($turca);
-  echo "<br>";
-
-  foreach($turca as $caracteristica => $value) {
-
-    echo "$caracteristica: $value <br>";
-
+  foreach($arrayAnimal as $tipo => $valor){
+    echo "$tipo : $valor . <br>";
   }

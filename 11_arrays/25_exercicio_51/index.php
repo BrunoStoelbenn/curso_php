@@ -13,9 +13,9 @@
 
 ?>
 
-<h1>Ranking:</h1>
+<h1>Ranking: </h1>
 <ol>
-  <?php foreach($ranking as $pessoa => $pontuacao): ?>
-    <li><?= $pessoa ?> -> <?= $pontuacao ?> pontos</li>
-  <?php endforeach; ?>
+  <?php foreach ($ranking as $nome => $pontuacao): ?>
+  <li><?= $nome ?> -> <?= $pontuacao ?> pontos</li>
+  <?php endforeach;?>
 </ol>
