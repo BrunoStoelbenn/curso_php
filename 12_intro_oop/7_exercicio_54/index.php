@@ -1,30 +1,25 @@
 <?php
 
-  class Pessoa {
 
+  class Pessoa{
     public $nome;
     public $idade;
 
-    function andar($m) {
-      echo "A pessoa andou $m metros <br>";
+    function andar($metros, $nome){
+      return "Eu, $nome, andei $metros metros. <br>";
     }
-
   }
 
-  $matheus = new Pessoa;
-
-  $matheus->nome = "Matheus";
-  $matheus->idade = 29;
-
-  echo "O nome dele é $matheus->nome e tem $matheus->idade anos <br>";
-
-  $matheus->andar(20);
-
-  $joaquim = new Pessoa;
-
-  $joaquim->nome = "Joaquim";
-  $joaquim->idade = 32;
-
-  echo "O nome dele é $joaquim->nome e tem $joaquim->idade anos <br>";
-
-  $joaquim->andar(30);
+  $pessoa1 = new Pessoa;
+  $pessoa2 = new Pessoa;
+  $pessoa3 = new Pessoa;
+  $pessoa1->nome = "Bruno Cassiano Stoelbenn";
+  $pessoa1->idade = 21;
+  echo($pessoa1->andar(2659, $pessoa1->nome));
+  $pessoa2->nome = "Jorge Alberto Stoelbenn";
+  $pessoa2->idade = 56;
+  echo($pessoa2->andar(8900, $pessoa2->nome));
+  $pessoa3->nome = "Silvia Janete Groth Stoelbenn";
+  $pessoa3->idade = 51;
+  echo($pessoa3->andar(5600, $pessoa3->nome));
+  

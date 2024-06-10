@@ -1,35 +1,39 @@
 <?php
 
-  class Cachorro {
-
+  class Cachorro{
     public $nome;
+    public $raca;
+    public $idade;
     public $cor;
-    public $patas;
 
-    function __construct($nome, $cor, $patas) {
-
+    function __construct($nome, $raca, $idade, $cor){
       $this->nome = $nome;
+      $this->raca = $raca;
+      $this->idade = $idade;
       $this->cor = $cor;
-      $this->patas = $patas;
-
     }
 
-    public function exibirAnimal() {
+    function getNome(){
+      return $this->nome . "<br>";
+    }
+    
+    function getRaca(){
+      return $this->raca . "<br>";
+    }
 
-      echo "O nome do cachorro é $this->nome, ele tem a cor $this->cor, e tem $this->patas patas <br>";
+    function getIdade(){
+      return $this->idade . "<br>";
+    }
 
+    function getCor(){
+      return $this->cor . "<br>";
+    }
+
+    function toString(){
+      return "O nome do cachorro é $this->nome, é da raça $this->raca, tem $this->idade anos e é da cor $this->cor. <br>";
     }
 
   }
 
-  $turca = new Cachorro("Turca", "Preta", 4);
-
-  $turca->exibirAnimal();
-
-  $nome = "Tubarão";
-  $cor = "Branca";
-  $patas = 4;
-
-  $tubarao = new Cachorro($nome, $cor, $patas);
-
-  $tubarao->exibirAnimal();
+  $sadan = new Cachorro("Sadan", "Pastor alemão", 3, "Dourado");
+  echo $sadan->toString();

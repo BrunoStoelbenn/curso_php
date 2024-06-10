@@ -1,22 +1,19 @@
 <?php
 
-  class Cachorro {
-
-    function latir() {
-      echo "Au au <br>";
+  class Cachorro{
+    
+    function latir(){
+      return "Eu sou um cachorro e eu vou latir. Au au au au au. <br>";
     }
-
-    function andar($m) {
-      echo "O cachorro andou $m metros <br>";
+    
+    function andar(){
+      return "Eu estou correndo. <br>";
     }
-
   }
 
-  $viraLata = new Cachorro;
-  $pastorAlemao = new Cachorro;
-
-  $viraLata->latir();
-  $pastorAlemao->latir();
-
-  $viraLata->andar(1000);
-  $pastorAlemao->andar(50);
+  $cachorro1 = new Cachorro;
+  $cachorro2 = new Cachorro;
+  echo $cachorro1->latir();
+  echo $cachorro2->latir();
+  echo $cachorro1->andar();
+  echo $cachorro2->andar();

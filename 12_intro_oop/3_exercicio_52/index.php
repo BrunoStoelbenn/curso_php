@@ -1,9 +1,10 @@
 <?php
 
-  class Car {
+  class Car{
 
   }
 
-  $bmw = new Car;
-  $ferrari = new Car;
-  $fiat = new Car;
+  $carroFord = new Car;
+  $carroRenault = new Car;
+  $carroVolkswagen = new Car;
+  $carroFiat = new Car;
