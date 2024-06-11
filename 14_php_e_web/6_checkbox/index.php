@@ -4,7 +4,9 @@
 
     $ingredientes = $_POST['ingredientes'];
 
-    print_r($ingredientes);
+    $ingredientesString = implode(", ", $ingredientes);
+
+    echo "O cliente quer comprar as seguintes mercadorias: $ingredientesString.";
 
   }
 
@@ -20,19 +22,24 @@
 <body>
   <form action="index.php" method="POST">
     <div>
-      <input type="checkbox" name="ingredientes[]" value="Tomate"> Tomate
+      <input type="checkbox" name="ingredientes[]" id="itomate" value="Tomate">
+      <label for="itomate">Tomate</label>
     </div>
     <div>
-      <input type="checkbox" name="ingredientes[]" value="Abóbora"> Abóbora
+      <input type="checkbox" name="ingredientes[]" id="iabóbora" value="Abóbora"> 
+      <label for="iabóbora">Abóbora</label>
     </div>
     <div>
-      <input type="checkbox" name="ingredientes[]" value="Feijão"> Feijão
+      <input type="checkbox" name="ingredientes[]" id="ifeijão" value="Feijão">
+      <label for="ifeijão">Feijão</label>
     </div>
     <div>
-      <input type="checkbox" name="ingredientes[]" value="Alface"> Alface
+      <input type="checkbox" name="ingredientes[]" id="ialface" value="Alface">
+      <label for="ialface">Alface</label>
     </div>
     <div>
-      <input type="checkbox" name="ingredientes[]" value="Cebola"> Cebola
+      <input type="checkbox" name="ingredientes[]" id="icebola" value="Cebola">
+      <label for="icebola">Cebola</label>
     </div>
     <div>
       <input type="submit" value="Enviar">

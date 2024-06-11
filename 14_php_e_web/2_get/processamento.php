@@ -1,6 +1,6 @@
 <?php
 
-  if(isset($_GET['nome'])) {
+  if(isset($_GET['nome'])) {  //  isset serve para que se não der certo pegar os parâmetros pelo get cair no else
     $nome = $_GET['nome'];
     $idade = $_GET['idade'];
   } else {

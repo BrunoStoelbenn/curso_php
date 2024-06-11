@@ -14,13 +14,16 @@
       <input type="text" name="preco" placeholder="Preço do carro">
     </div>
     <div>
-      <input type="checkbox" name="opcionais[]" value="Teto solar"> Teto solar
+      <input type="checkbox" name="opcionais[]" id="iopcionais" value="Teto solar">
+      <label for="iopcionais"> Teto solar</label>
     </div>
     <div>
-      <input type="checkbox" name="opcionais[]" value="Película"> Película
+      <input type="checkbox" name="opcionais[]" id="ipelícula" value="Película">
+      <label for="ipelícula"> Película</label>
     </div>
     <div>
-      <input type="checkbox" name="opcionais[]" value="Blindado"> Blindado
+      <input type="checkbox" name="opcionais[]" id="iblindado" value="Blindado">
+      <label for="iblindado"> Blindado</label>
     </div>
     <div>
       <input type="submit" value="Enviar">
