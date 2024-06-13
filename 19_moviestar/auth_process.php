@@ -18,8 +18,8 @@
 
     $name = filter_input(INPUT_POST, "name");
     $lastname = filter_input(INPUT_POST, "lastname");
-    $email = filter_input(INPUT_POST, "email");
-    $password = filter_input(INPUT_POST, "password");
+    $email = filter_input(INPUT_POST, "Createemail");
+    $password = filter_input(INPUT_POST, "Createpassword");
     $confirmpassword = filter_input(INPUT_POST, "confirmpassword");
 
     // Verificação de dados mínimos 

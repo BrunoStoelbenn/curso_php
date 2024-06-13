@@ -24,12 +24,12 @@
           <form action="<?= $BASE_URL ?>auth_process.php" method="POST">
             <input type="hidden" name="type" value="register">
             <div class="form-group">
-              <label for="createemail">E-mail:</label>
-              <input type="email" class="form-control" id="createemail" name="email" placeholder="Digite seu e-mail">
+              <label for="Createemail">E-mail:</label>
+              <input type="email" class="form-control" id="Createemail" name="Createemail" placeholder="Digite seu e-mail">
             </div>
             <div class="form-group">
               <label for="name">Nome:</label>
-              <input type="text" class="form-control" id="name" name="createname" placeholder="Digite seu nome">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
             </div>
             <div class="form-group">
               <label for="lastname">Sobrenome:</label>
@@ -37,9 +37,9 @@
             </div>
             <div class="form-group">
               <label for="Createpassword">Senha:</label>
-              <input type="password" class="form-control" id="Createpassword" name="password" placeholder="Digite sua senha">
+              <input type="password" class="form-control" id="Createpassword" name="Createpassword" placeholder="Digite sua senha">
             </div>
-            <div class="form-group">
+            <div class="form-group">     
               <label for="confirmpassword">Confirmação de senha:</label>
               <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirme sua senha">
             </div>
