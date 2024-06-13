@@ -20,12 +20,9 @@
 
       foreach($data as $item) {
 
-        $car = new Car();
+        $car = new Car($item["brand"], $item["modelo"], $item["km"], $item["color"]);
 
         $car->setId($item["id"]);
-        $car->setBrand($item["brand"]);
-        $car->setKm($item["km"]);
-        $car->setColor($item["color"]);
 
         $cars[] = $car;
 
@@ -36,15 +33,15 @@
     }
 
     public function create(Car $car) {
-
-      $stmt = $this->conn->prepare("INSERT INTO cars (brand, km, color) VALUES (:brand, :km, :color)");
+      
+      $stmt = $this->conn->prepare("INSERT INTO cars(brand, modelo, km, color) VALUES (:brand, :modelo, :km, :color)");
 
       $stmt->bindParam(":brand", $car->getBrand());
+      $stmt->bindParam(":modelo", $car->getModelo());
       $stmt->bindParam(":km", $car->getKm());
       $stmt->bindParam(":color", $car->getColor());
 
       $stmt->execute();
-
     }
 
   }

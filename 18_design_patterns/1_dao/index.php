@@ -15,6 +15,11 @@
     <label for="brand">Marca do carro:</label>
     <input type="text" name="brand" placeholder="Insira a marca">
   </div>
+  <!-- Vou criar mais um campo que eu acho que estou faltando que é modelo.-->
+   <div>
+    <label for="modelo">Modelo:</label>
+    <input type="text" name="modelo" id="modelo" placeholder="Insira o modelo do veículo">
+   </div>
   <div>
     <label for="km">Kilometragem:</label>
     <input type="text" name="km" placeholder="Insira a kilometragem">
@@ -27,6 +32,6 @@
 </form>
 <ul>
   <?php foreach($cars as $car): ?>
-    <li><?= $car->getBrand() ?> - <?= $car->getKm() ?> - <?= $car->getColor() ?></li>
+    <li><?= $car->getBrand() ?> - <?= $car->getModelo() ?> - <?= $car->getKm() ?> - <?= $car->getColor() ?></li>
   <?php endforeach; ?>
 </ul>

@@ -6,14 +6,11 @@
   $carDao = new CarDao($conn);
 
   $brand = $_POST["brand"];
+  $modelo = $_POST["modelo"];
   $km = $_POST["km"];
   $color = $_POST["color"];
 
-  $newCar = new Car();
-
-  $newCar->setBrand($brand);
-  $newCar->setKm($km);
-  $newCar->setColor($color);
+  $newCar = new Car($brand, $modelo ,$km, $color);
 
   $carDao->create($newCar);
 
