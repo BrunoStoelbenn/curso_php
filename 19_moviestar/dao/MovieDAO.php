@@ -129,7 +129,7 @@
       $stmt->bindParam(":id", $id);
 
       $stmt->execute();
-
+''
       if($stmt->rowCount() > 0) {
 
         $movieData = $stmt->fetch();
@@ -151,9 +151,9 @@
       $movies = [];
 
       $stmt = $this->conn->prepare("SELECT * FROM movies
-                                    WHERE title LIKE :title");
+                                    WHERE title LIKE :title");  //  O like irá retornar não só os filmes com os nomes iguais mas também os filmes com os nomes parecidos
 
-      $stmt->bindValue(":title", '%'.$title.'%');
+      $stmt->bindValue(":title", '%'.$title.'%'); 
 
       $stmt->execute();
 
