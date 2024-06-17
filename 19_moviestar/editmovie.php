@@ -43,7 +43,7 @@
       <div class="row">
         <div class="col-md-6 offset-md-1">
           <h1><?= $movie->title ?></h1>
-          <p class="page-description">Altere os dados do filme no fomrulário abaixo:</p>
+          <p class="page-description">Altere os dados do filme no formulário abaixo:</p>
           <form id="edit-movie-form" action="<?= $BASE_URL ?>movie_process.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="type" value="update">
             <input type="hidden" name="id" value="<?= $movie->id ?>">
