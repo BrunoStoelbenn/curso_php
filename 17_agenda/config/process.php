@@ -1,90 +1,44 @@
 <?php
 
-  session_start();
 
-  include_once("connection.php");
-  include_once("url.php");
+  require_once("connection.php");
+  require_once("url.php");
+  require_once(__DIR__ . "/../models/Contact.php");
+  require_once(__DIR__ . "/../dao/ContactDAO.php");
 
-  $data = $_POST;
+  $type = filter_input(INPUT_POST, "type");
+
+  $contactDAO = new ContactDAO($conn);
 
   // MODIFICAÇÕES NO BANCO
-  if(!empty($data)) {
+  if(!empty($type)) {
 
     // Criar contato
-    if($data["type"] === "create") {
+    if($type === "create") {
 
-      $name = $data["name"];
-      $phone = $data["phone"];
-      $observations = $data["observations"];
+      $name = filter_input(INPUT_POST, "name");
+      $phone = filter_input(INPUT_POST, "phone");
+      $observations = filter_input(INPUT_POST, "observations");
 
-      $query = "INSERT INTO contacts (name, phone, observations) VALUES (:name, :phone, :observations)";
+      $contact = new Contact($name, $phone, $observations);
 
-      $stmt = $conn->prepare($query);
+      $contactDAO->createContact($contact);
 
-      $stmt->bindParam(":name", $name);
-      $stmt->bindParam(":phone", $phone);
-      $stmt->bindParam(":observations", $observations);
+    } else if($type === "edit") {
 
-      try {
+      $name = filter_input(INPUT_POST, "name");
+      $phone = filter_input(INPUT_POST, "phone");
+      $observations = filter_input(INPUT_POST, "observations");
+      $id = filter_input(INPUT_POST, "id");
 
-        $stmt->execute();
-        $_SESSION["msg"] = "Contato criado com sucesso!";
-    
-      } catch(PDOException $e) {
-        // erro na conexão
-        $error = $e->getMessage();
-        echo "Erro: $error";
-      }
+      $contact = new Contact($name, $phone, $observations);
 
-    } else if($data["type"] === "edit") {
+      $contactDAO->updateContact($contact, $id);
 
-      $name = $data["name"];
-      $phone = $data["phone"];
-      $observations = $data["observations"];
-      $id = $data["id"];
+    } else if($type === "delete") {
+      $id = filter_input(INPUT_POST, "id");
 
-      $query = "UPDATE contacts 
-                SET name = :name, phone = :phone, observations = :observations 
-                WHERE id = :id";
-
-      $stmt = $conn->prepare($query);
-
-      $stmt->bindParam(":name", $name);
-      $stmt->bindParam(":phone", $phone);
-      $stmt->bindParam(":observations", $observations);
-      $stmt->bindParam(":id", $id);
-
-      try {
-
-        $stmt->execute();
-        $_SESSION["msg"] = "Contato atualizado com sucesso!";
-    
-      } catch(PDOException $e) {
-        // erro na conexão
-        $error = $e->getMessage();
-        echo "Erro: $error";
-      }
-
-    } else if($data["type"] === "delete") {
-
-      $id = $data["id"];
-
-      $query = "DELETE FROM contacts WHERE id = :id";
-
-      $stmt = $conn->prepare($query);
-
-      $stmt->bindParam(":id", $id);
-      
-      try {
-
-        $stmt->execute();
-        $_SESSION["msg"] = "Contato removido com sucesso!";
-    
-      } catch(PDOException $e) {
-        // erro na conexão
-        $error = $e->getMessage();
-        echo "Erro: $error";
-      }
+      $contactDAO->deleteContact($id);
 
     }
 

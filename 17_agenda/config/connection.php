@@ -1,8 +1,8 @@
 <?php
 
   $host = "localhost";
-  $user = "Bruno Stoelbenn";
-  $pass = "brunogremist@02";
+  $user = "root";
+  $pass = "";
   $dbname = "agenda";
 
   try {
