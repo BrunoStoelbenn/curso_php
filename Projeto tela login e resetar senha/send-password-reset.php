@@ -32,7 +32,9 @@ if ($mysqli->affected_rows) {
     );
 
     // Enviar o email
+
     $sendgrid = new \SendGrid('YOUR_SENDRID_API_KEY');
+
     try {
         $response = $sendgrid->send($email);
         print_r($response); // Printar a resposta completa do SendGrid
