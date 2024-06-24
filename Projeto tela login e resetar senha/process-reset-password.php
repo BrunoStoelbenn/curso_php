@@ -58,3 +58,14 @@ $stmt->bind_param("ss", $password_hash, $user["id"]);
 $stmt->execute();
 
 echo "Password updated. You can now login.";
+
+//  Espera 4 segundos antes de redirecionar
+sleep(4);
+
+header("Location: http://localhost/curso_php/Projeto%20tela%20login%20e%20resetar%20senha/login.php?token=$token");
+exit;
+
+
+
+
+
