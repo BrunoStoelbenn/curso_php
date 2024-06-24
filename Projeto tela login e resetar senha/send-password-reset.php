@@ -39,7 +39,7 @@ $stmt->execute();
 if ($mysqli->affected_rows) {
     // Configurar o email
     $email = new Mail();
-    $email->setFrom("your_email", "Suporte Focel");  //  Aqui é o email que vai enviar a requisição
+    $email->setFrom("Your_Email", "Suporte Focel");  //  Aqui é o email que vai enviar a requisição
     $email->setSubject("Password Reset Request");  //  Assunto do email
     $email->addTo($userEmail);  //  email do destinatário que foi pego através de um __$POST["email"] no início do código
     $email->addContent(  //  Conteúdo que vai aparecer no email, nesse caso vai ser "Click here to reset your password"
@@ -48,8 +48,7 @@ if ($mysqli->affected_rows) {
     );
 
     // Enviar o email
-
-    $sendgrid = new \SendGrid('YOUR_SENDRID_API_KEY');
+    $sendgrid = new \SendGrid('Your_SendGrid_APIKEY');  //  Chave API do SendGrid
 
     try {
         $response = $sendgrid->send($email);
