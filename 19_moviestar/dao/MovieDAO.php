@@ -129,7 +129,7 @@
       $stmt->bindParam(":id", $id);
 
       $stmt->execute();
-''
+
       if($stmt->rowCount() > 0) {
 
         $movieData = $stmt->fetch();
